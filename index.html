@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box">
+
+        <video autoplay loop muted plays-incline id="background-video">
+            <source src="img/video.mp4" type="video/mp4">
+        </video>
+
+        <img src="img/menu.png" alt="" class="menuIcon">
+
+        <div class="sidebar">
+            <div class="topLinks">
+                <img src="img/leftArrow-icon.png" alt="" class="leftArrow-icon" width="30px">
+
+                <div>
+                    <img src="img/microphone-icon.png" alt="" class="microphone-icon" width="30px">
+                    <img src="img/external-link-icon.png" alt="" class="external-link-icon" width="30px">
+                </div>
+            </div>
+
+            <h1>Obi Consulting Co.</h1>
+            <h3>Ibadan, Nigeria</h3>
+            <p>
+                Our firm is a business comprised of industry-specific experts who offer professional advice, 
+                guidance, and actionable solutions to businesses experiencing issues they can't deal with in-house. 
+                Every company is bound to have problems; consulting firms are contracted to solve them.
+            </p>
+
+            <a href="#">More Information</a>
+
+        </div>
+        <img src="img/play-icon.png" alt="" onclick="plays()" id="playBtn" width="100px">
+
+    </div>
+
+    <script>
+        let backgroundVideo = document.getElementById('background-video')
+        let Play = document.getElementById('playBtn')
+
+        function plays() {
+            backgroundVideo.style.display = 'block'
+
+            if (backgroundVideo.paused) {
+                backgroundVideo.play()
+                playBtn.src = 'img/pause-icon.png'
+            } else {
+                backgroundVideo.pause()
+                playBtn.src = 'img/play-icon.png'
+            }
+        }
+    </script>
+</body>
+
+</html>
